@@ -1,0 +1,66 @@
+"""Tuple exercises."""
+
+
+def get_sum_and_diff(a: int, b: int) -> tuple:
+    """
+    Return sum of a and b and diff of a and b.
+
+    :param a: an integer
+    :param b: an integer
+    :return: a tuple with two values: sum of a and b, and the difference of a and b (a - b)
+    """
+    return a + b, a - b
+
+
+def create_tuple_from_two_numbers(a: int, b: int) -> tuple:
+    """
+    Create a tuple.
+
+    :param a: an integer
+    :param b: an integer
+    :return: a tuple with one element if a and b are the same, otherwise a tuple with a and b
+    """
+    return (a,) if a == b else (a, b)
+
+
+def create_tuple_up_to_n(n: int) -> tuple:
+    """
+    Create tuple with numbers from 0 up to n (inclusive).
+
+    :param n: an integer
+    :return: a tuple with numbers from 0 to n
+    """
+    return tuple(range(n + 1)) if n >= 0 else ()
+
+
+def merge_tuples(a: tuple, b: tuple) -> tuple:
+    """
+    Merge two tuples by adding b elements after a elements.
+
+    :param a: a tuple
+    :param b: a tuple
+    :return: a new tuple with elements from a followed by elements from b
+    """
+    return a + b
+
+
+def remove_odd_numbers(numbers: tuple) -> tuple:
+    """
+    Return a tuple where all the odd numbers are removed from the input tuple.
+
+    :param numbers: a tuple of integers
+    :return: a new tuple with only even numbers
+    """
+    return tuple(filter(lambda x: x % 2 == 0, numbers))
+
+
+def insert_tuple_inside_tuple(outer_tuple: tuple, position: int, inner_tuple: tuple) -> tuple:
+    """
+    Insert inner_tuple inside outer_tuple at the given position.
+
+    :param outer_tuple: a tuple
+    :param position: an integer representing the position where inner_tuple should be inserted
+    :param inner_tuple: a tuple to be inserted
+    :return: a new tuple with inner_tuple inserted at the specified position
+    """
+    return outer_tuple[:position] + inner_tuple + outer_tuple[position:]
