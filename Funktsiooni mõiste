@@ -1,0 +1,39 @@
+"""Basic function exercises."""
+import math
+
+
+def print_hello():
+    """Print "Hello"."""
+    print("Hello")
+
+def get_hello() -> str:
+    """Return "Hello"."""
+    return "Hello"
+
+def ask_name_and_greet_user():
+    """Ask name and greet the user."""
+    name = input("Enter your name: ")
+    name = name.capitalize()  # Capitalize the first letter, make the rest lowercase
+
+    if name.lower() == "thanos":
+        print(f"Get out of here, {name}! Nobody wants to play with you!")
+    else:
+        print(f"Hi, {name}. Would you like to have a Hamburger?")
+
+def calculate_hypotenuse_length(a: float, b: float) -> float:
+    """Return the hypotenuse value."""
+    hypotenuse = math.sqrt(a**2 + b**2)
+    return hypotenuse
+
+def calculate_cathetus_length(a: float, c: float) -> float:
+    """Return the cathetus value."""
+    cathetus = math.sqrt(c**2 - a**2)
+    return cathetus
+
+if __name__ == '__main__':
+    print_hello()  # Should print "Hello"
+    hello = get_hello()  # Should return "Hello"
+    print(hello)  # Let's check the value of the hello variable
+    ask_name_and_greet_user()  # Should ask for the name and greet accordingly
+    print(calculate_hypotenuse_length(3, 4))  # Should print 5.0
+    print(calculate_cathetus_length(3, 5))  # Should print 4.0
