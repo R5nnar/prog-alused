@@ -1,0 +1,18 @@
+"""Simple Class"""
+class Student:
+    """
+    Klassi Student kirjeldus.
+    """
+    def __init__(self, name):
+        """
+        Klassi konstruktor, mis määrab väljad name ja finished.
+
+        :param name: Õpilase nimi.
+        """
+        self.name = name
+        self.finished = False
+
+# Koodi testimine
+student = Student("John")
+print(student.name)       # John
+print(student.finished)   # False
