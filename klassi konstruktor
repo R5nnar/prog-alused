@@ -1,0 +1,63 @@
+"""Constructor exercise."""
+
+
+class Empty:
+    """Represent an empty object."""
+
+    def __init__(self):
+        """Initialize an empty object."""
+        pass
+
+
+class Person:
+    """Represent a person with name, lastname, and age."""
+
+    def __init__(self):
+        """Initialize a new person object."""
+        self.firstname = ""  # First name of the person.
+        self.lastname = ""  # Last name of the person.
+        self.age = 0  # Age of the person.
+
+
+class Student:
+    """Represent a student with name, lastname, age, and id."""
+
+    def __init__(self, firstname: str, lastname: str, age: int):
+        """Initialize a new student object."""
+        self.firstname = firstname
+        self.lastname = lastname
+        self.age = age  # Age of the student.
+        self.id = 0  # ID of the student.
+
+
+if __name__ == "__main__":
+    """Create Empty, Person, and Student objects."""
+    empty = Empty()
+
+    person1 = Person()  # Create an empty person object.
+    person1.firstname = "Mati"
+    person1.lastname = "Kaal"
+    person1.age = 10
+
+    person2 = Person()  # Create another empty person object.
+    person2.firstname = "Kati"
+    person2.lastname = "Maal"
+    person2.age = 20
+
+    person3 = Person()  # Create a third empty person object.
+    person3.firstname = "Jüri"
+    person3.lastname = "Käss"
+    person3.age = 30
+
+    student1 = Student("Mihkel", "Must", 12)
+    student2 = Student("Liisa", "Valge", 14)
+    student3 = Student("Peeter", "Punane", 16)
+
+    """Print the objects."""
+    print(empty)  # Print the empty object.
+    print(person1)
+    print(person2)
+    print(person3)
+    print(student1)
+    print(student2)
+    print(student3)
